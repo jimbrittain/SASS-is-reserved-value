@@ -1,0 +1,8 @@
+@function is-reserved-value($str) {
+    @if(type-of($str) == string) {
+        @if $str == none or $str == inherit or $str == initial or $str == unset {
+            @return true;
+        } @else {
+            @return false;
+        }
+    } @else { @return false; }}
